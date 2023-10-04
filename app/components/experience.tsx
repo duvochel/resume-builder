@@ -1,83 +1,76 @@
 import Image from "next/image";
 
-interface WorkExperience {
-  company: string;
-  endDate: string;
-  highlights: string[];
-  position: string;
-  startDate: string;
-  summary: string;
-  website: string;
-  icon: string;
-}
+import SectionTitle from "./sectionTitle";
+import { WorkExperience } from "@/types/globalTypes";
+import TaskGroup from "./taskGroup";
+
 interface ExperienceProps {
   experience: WorkExperience;
 }
 
 export default function Experience({ experience }: ExperienceProps) {
   return (
-    <div className="bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex mx-auto gap-12">
+    <div className="flex flex-col gap-4 bg-white py-10 sm:py-6 px-12 rounded-xl border border-gray-100">
+      <div className="flex items-center gap-12 relative">
         <Image
-                width={150}
-                height={150}
-                src={experience.icon}
-                alt=""
-                className="h-20 w-20 rounded-full bg-gray-50"
-              />
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          width={150}
+          height={130}
+          src={experience.icon}
+          alt="logo"
+          className="h-16 -ml-12"
+        />
+        <div className="flex flex-col">
+          <h2 className="text-2xl tracking-tight text-gray-900 sm:text-3xl">
             {experience.company}
           </h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
+          <div className="flex items-center gap-x-4 text-xs justify-end">
+            <span className="text-gray-500">{experience.startDate}</span>
+            <span>-</span>
+            <span className="text-gray-500">{experience.endDate}</span>
+            <span>({experience.summary})</span>
+          </div>
+        </div>
+      </div>
+      <article className="flex flex-col items-start justify-between">
+        <div className="group relative">
+          <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 text-center">
+            <span className="absolute inset-0"></span>
             {experience.position}
-          </p>
+          </h3>
+          <div className="flex flex-col gap-4">
+            <SectionTitle label="Projet" />
+            <p className="text-gray-600 text-justify px-2">
+              {experience.project}
+            </p>
+          </div>
         </div>
-        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          <article className="flex max-w-xl flex-col items-start justify-between">
-            <div className="flex items-center gap-x-4 text-xs">
-              <time dateTime="2020-03-16" className="text-gray-500">
-                {experience.startDate}
-              </time>
-              <a
-                href="#"
-                className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-              >
-                Marketing
-              </a>
-            </div>
-            <div className="group relative">
-              <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                <a href="#">
-                  <span className="absolute inset-0"></span>
-                  {experience.website}
-                </a>
-              </h3>
-              <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-                {experience.summary}
-              </p>
-            </div>
-            <div className="relative mt-8 flex items-center gap-x-4">
-              <Image
-                width={300}
-                height={300}
-                src={experience.icon}
-                alt=""
-                className="h-10 w-10 rounded-full bg-gray-50"
-              />
-              <div className="text-sm leading-6">
-                <p className="font-semibold text-gray-900">
-                  <a href="#">
-                    <span className="absolute inset-0"></span>
-                    Michael Foster
-                  </a>
-                </p>
-                <p className="text-gray-600">Co-Founder / CTO</p>
-              </div>
-            </div>
-          </article>
-          More posts...
-        </div>
+      </article>
+      <div className="flex flex-row gap-4 items-end">
+        <SectionTitle label="Equipe" />
+        <span>{experience.team}</span>
+      </div>
+      <div className="flex flex-col gap-4">
+        <SectionTitle label="Responsabilités" />
+        <ul className="px-4">
+          {experience.scopes.map((scope, index) => (
+            <li key={index}>{scope}</li>
+          ))}
+        </ul>
+      </div>
+      <div className="flex flex-col gap-4">
+        <SectionTitle label="Tâches" />
+        <TaskGroup tasks={experience.tasks} />
+      </div>
+      <SectionTitle label="Stack" />
+      <div className="flex flex-wrap gap-4">
+        {experience.stack.map((s, index) => (
+          <span
+            key={index}
+            className="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+          >
+            {s}
+          </span>
+        ))}
       </div>
     </div>
   );

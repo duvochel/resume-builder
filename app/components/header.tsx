@@ -14,11 +14,11 @@ export default function Header() {
           height={275}
           className="w-44 h-44 rounded-full drop-shadow-md"
         />
-        <div className=" flex flex-wrap pl-8">
-          <div className="flex text-4xl grow justify-left pr-8 font-bold items-center">
-            <span>{PROFILE.basics.name}</span>
+        <div className=" flex flex-col justify-center pl-8 gap-2">
+          <div className="flex text-4xl justify-left font-bold">
+            <h1 className="text-light-gray">{PROFILE.basics.name}</h1>
           </div>
-          <div className="flex text-xl items-center">
+          <div className="flex text-xl w-96 justify-end">
             <span>{PROFILE.basics.label}</span>
           </div>
         </div>
