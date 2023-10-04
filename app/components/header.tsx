@@ -5,20 +5,20 @@ import PROFILE from "../linkedIn-toJSON_fr.json";
 export default function Header() {
   const profiles = PROFILE.basics.profiles;
   return (
-    <header className="flex flex-col w-full gap-12 max-w-screen-xl mx-auto pt-10 pb-6 px-6 customShadow">
+    <header className="flex flex-col w-full max-w-screen-lg mx-auto p-6 customShadow">
       <div className="grid grid-flow-col auto-cols-max">
         <Image
           src="/avatar.jpeg"
           alt=""
           width={300}
           height={275}
-          className="w-44 h-44 rounded-full drop-shadow-md"
+          className="w-36 h-36 rounded-full drop-shadow-md"
         />
         <div className=" flex flex-col justify-center pl-8 gap-2">
-          <div className="flex text-4xl justify-left font-bold">
+          <div className="flex text-3xl justify-left font-bold">
             <h1 className="text-light-gray">{PROFILE.basics.name}</h1>
           </div>
-          <div className="flex text-xl w-96 justify-end">
+          <div className="flex text-lg w-96 justify-end">
             <span>{PROFILE.basics.label}</span>
           </div>
         </div>

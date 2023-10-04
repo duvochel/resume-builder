@@ -1,7 +1,15 @@
+import Image from "next/image";
+
 interface SectionTitleProps {
   label: string;
+  icon: string;
 }
 
-export default function SectionTitle({ label }: SectionTitleProps) {
-  return <span className="text-black font-thin text-2xl max-w-fit">{label}</span>;
+export default function SectionTitle({ label, icon }: SectionTitleProps) {
+  return (
+    <div className="flex gap-4">
+      <Image src={icon} width={20} height={20} alt="" />
+      <h2 className="text-2xl my-16">{label.toUpperCase()}</h2>
+    </div>
+  );
 }

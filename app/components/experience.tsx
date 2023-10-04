@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import SectionTitle from "./sectionTitle";
-import { WorkExperience } from "@/types/globalTypes";
+import ParagrapheTitle from "./paragrapheTitle";
+import { WorkExperience } from "@/types/experience";
 import TaskGroup from "./taskGroup";
 
 interface ExperienceProps {
@@ -17,10 +17,10 @@ export default function Experience({ experience }: ExperienceProps) {
           height={130}
           src={experience.icon}
           alt="logo"
-          className="h-16 -ml-12"
+          className="h-12 w-16 -ml-4"
         />
         <div className="flex flex-col">
-          <h2 className="text-2xl tracking-tight text-gray-900 sm:text-3xl">
+          <h2 className="text-xl tracking-tight text-gray-900">
             {experience.company}
           </h2>
           <div className="flex items-center gap-x-4 text-xs justify-end">
@@ -33,12 +33,12 @@ export default function Experience({ experience }: ExperienceProps) {
       </div>
       <article className="flex flex-col items-start justify-between">
         <div className="group relative">
-          <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 text-center">
+          <h3 className="mt-3 text-base font-semibold leading-6 text-gray-900 group-hover:text-gray-600 text-center">
             <span className="absolute inset-0"></span>
             {experience.position}
           </h3>
           <div className="flex flex-col gap-4">
-            <SectionTitle label="Projet" />
+            <ParagrapheTitle label="Projet" />
             <p className="text-gray-600 text-justify px-2">
               {experience.project}
             </p>
@@ -46,11 +46,11 @@ export default function Experience({ experience }: ExperienceProps) {
         </div>
       </article>
       <div className="flex flex-row gap-4 items-end">
-        <SectionTitle label="Equipe" />
+        <ParagrapheTitle label="Equipe" />
         <span>{experience.team}</span>
       </div>
       <div className="flex flex-col gap-4">
-        <SectionTitle label="Responsabilités" />
+        <ParagrapheTitle label="Responsabilités" />
         <ul className="px-4">
           {experience.scopes.map((scope, index) => (
             <li key={index}>{scope}</li>
@@ -58,10 +58,10 @@ export default function Experience({ experience }: ExperienceProps) {
         </ul>
       </div>
       <div className="flex flex-col gap-4">
-        <SectionTitle label="Tâches" />
+        <ParagrapheTitle label="Tâches" />
         <TaskGroup tasks={experience.tasks} />
       </div>
-      <SectionTitle label="Stack" />
+      <ParagrapheTitle label="Stack" />
       <div className="flex flex-wrap gap-4">
         {experience.stack.map((s, index) => (
           <span

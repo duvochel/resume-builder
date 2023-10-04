@@ -1,4 +1,4 @@
-import { TaskGroup } from "@/types/globalTypes";
+import { TaskGroup } from "@/types/experience";
 import TaskList from "./taskList";
 
 interface TaskGroupProps {
@@ -21,7 +21,7 @@ export default function TaskGroup({ tasks }: TaskGroupProps) {
         <TaskList label="Lead" tasks={tasks.lead} />
       )}
       {tasks.other.length > 0 && (
-        <TaskList label="Autres" tasks={tasks.other} />
+        <TaskList tasks={tasks.other} />
       )}
     </div>
   );
