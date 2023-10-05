@@ -27,7 +27,7 @@ export default function Experience({ experience }: ExperienceProps) {
             <span className="text-gray-500">{experience.startDate}</span>
             <span>-</span>
             <span className="text-gray-500">{experience.endDate}</span>
-            <span>({experience.summary})</span>
+            <span>({experience.rangeString})</span>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@ export default function Experience({ experience }: ExperienceProps) {
           <div className="flex flex-col gap-4">
             <ParagrapheTitle label="Projet" />
             <p className="text-gray-600 text-justify px-2">
-              {experience.project}
+              {experience.summary}
             </p>
           </div>
         </div>

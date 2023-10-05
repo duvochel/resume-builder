@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import PROFILE from "../linkedIn-toJSON_fr.json";
+import { CHINESE_FLAG_ICON, ENG_FLAG_ICON, FRENCH_FLAG_ICON } from "@/constantes";
 
 export default function Header() {
   const profiles = PROFILE.basics.profiles;
@@ -21,6 +22,11 @@ export default function Header() {
           <div className="flex text-lg w-96 justify-end">
             <span>{PROFILE.basics.label}</span>
           </div>
+        </div>
+        <div className="flex flex-row gap-1 ml-20">
+          <Image src={ENG_FLAG_ICON} alt="" width={20} height={20} />
+          <Image src={FRENCH_FLAG_ICON} alt="" width={20} height={20} />
+          <Image src={CHINESE_FLAG_ICON} alt="" width={20} height={20} />
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4 max-w-fit self-end">

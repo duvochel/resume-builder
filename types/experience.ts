@@ -1,12 +1,12 @@
 export interface WorkExperience {
   company: string;
+  startDate: string;
   endDate: string;
+  rangeString: string;
   highlights: string[];
   position: string;
-  startDate: string;
   summary: string;
   website: string;
-  project: string;
   team: string;
   scopes: string[];
   tasks: TaskGroup;

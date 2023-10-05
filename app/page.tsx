@@ -5,6 +5,7 @@ import Header from "./components/header";
 import PROFILE from "./linkedIn-toJSON_fr.json";
 import Image from "next/image";
 import SectionTitle from "./components/sectionTitle";
+import Summary from "./components/summary";
 
 export default function Home() {
   const experiences = PROFILE.work;
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <Header />
       <main className="flex min-h-screen max-w-screen-lg mx-auto flex-col gap-8 items-center justify-between px-14">
+        <Summary summary={PROFILE.basics.summary} />
         <div>
           <SectionTitle label="EXPERIENCE" icon="/briefcase.svg" />
           <div className="flex flex-col gap-8">
