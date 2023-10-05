@@ -3,6 +3,7 @@ import Image from "next/image";
 import ParagrapheTitle from "./paragrapheTitle";
 import { WorkExperience } from "@/types/experience";
 import TaskGroup from "./taskGroup";
+import Badge from "./badge";
 
 interface ExperienceProps {
   experience: WorkExperience;
@@ -46,7 +47,7 @@ export default function Experience({ experience }: ExperienceProps) {
         </div>
       </article>
       <div className="flex flex-row gap-4 items-end">
-        <ParagrapheTitle label="Equipe" />
+        <span className="font-medium">Equipe : </span>
         <span>{experience.team}</span>
       </div>
       <div className="flex flex-col gap-4">
@@ -64,12 +65,7 @@ export default function Experience({ experience }: ExperienceProps) {
       <ParagrapheTitle label="Stack" />
       <div className="flex flex-wrap gap-4">
         {experience.stack.map((s, index) => (
-          <span
-            key={index}
-            className="rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-          >
-            {s}
-          </span>
+          <Badge key={index} label={s} />
         ))}
       </div>
     </div>
