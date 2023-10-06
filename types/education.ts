@@ -1,4 +1,4 @@
-export interface Diploma {
+export interface IDiploma {
     institution: string;
     icon?: string;
     area: string;

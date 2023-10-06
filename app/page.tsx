@@ -1,42 +1,27 @@
-import Experience from './components/experience';
-import Diploma from './components/diploma';
-import Header from './components/header';
+import Link from 'next/link';
+import { ReactNode } from 'react';
 
-import PROFILE from './linkedIn-toJSON_fr.json';
-import SectionTitle from './components/sectionTitle';
-import Summary from './components/summary';
-import SkillList from './components/skillList';
+interface CustomLinkProps {
+  to: string;
+  children: ReactNode;
+}
+
+function CustomLink({ to, children }: CustomLinkProps) {
+  return (
+    <Link
+      href={to}
+      className="rounded-full w-56 bg-lime-400 hover:bg-lime-700 transition-all duration-300 hover:text-gray-50 shadow py-2 px-3"
+    >
+      {children}
+    </Link>
+  );
+}
 
 export default function Home() {
-  const experiences = PROFILE.work;
-  const education = PROFILE.education;
   return (
-    <>
-      <Header />
-      <main className="flex min-h-screen w-a4 mx-auto flex-col gap-8 items-center justify-between px-14 pb-6">
-        <Summary summary={PROFILE.basics.summary} />
-        <SkillList isIcon skills={PROFILE.skills} />
-        <div>
-          <SectionTitle label="expérience" icon="/briefcase.svg" />
-          <div className="flex flex-col gap-8 divide-y">
-            {experiences.map((exp, index) => (
-              <Experience key={index} experience={exp} />
-            ))}
-          </div>
-        </div>
-        <div className="w-full">
-          <SectionTitle label="formation" icon="/academic.svg" />
-          <div className="flex flex-wrap gap-8">
-            {education.map((diploma, index) => (
-              <Diploma key={index} diploma={diploma} />
-            ))}
-          </div>
-        </div>
-        <div>
-          <SectionTitle label="compétence" icon="/icons/cog-6-tooth.svg" />
-          <SkillList skills={PROFILE.skills} />
-        </div>
-      </main>
-    </>
+    <div className="mt-32 mx-auto p-8 w-fit flex flex-col gap-4 text-xl text-center">
+      <CustomLink to="/fr">Français</CustomLink>
+      <CustomLink to="/en">English</CustomLink>
+    </div>
   );
 }

@@ -1,16 +1,11 @@
+import { Skill } from "@/types/skill";
+
 import Image from "next/image";
 import Badge from "./badge";
 
 interface SkillListProps {
   skills: Skill[];
   isIcon?: boolean;
-}
-
-interface Skill {
-  name: string;
-  icon: string;
-  level: string;
-  keywords: string[];
 }
 
 export default function SkillList({ skills, isIcon }: SkillListProps) {

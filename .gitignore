@@ -35,5 +35,5 @@ yarn-error.log*
 next-env.d.ts
 
 # dev data
-linkedIn-toJSON_fr.json
+/data
 public/avatar.jpeg
