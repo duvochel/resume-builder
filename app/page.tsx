@@ -13,12 +13,12 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex min-h-screen max-w-screen-lg mx-auto flex-col gap-8 items-center justify-between px-14 pb-6">
+      <main className="flex min-h-screen w-a4 mx-auto flex-col gap-8 items-center justify-between px-14 pb-6">
         <Summary summary={PROFILE.basics.summary} />
         <SkillList isIcon skills={PROFILE.skills} />
         <div>
           <SectionTitle label="expérience" icon="/briefcase.svg" />
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 divide-y">
             {experiences.map((exp, index) => (
               <Experience key={index} experience={exp} />
             ))}

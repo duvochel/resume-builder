@@ -24,7 +24,7 @@ export default function SkillList({ skills, isIcon }: SkillListProps) {
               alt=""
               width={150}
               height={150}
-              className="h-10 w-10"
+              className="h-8 w-8"
             />
           ) : (
             <Badge label={skill.name} />
