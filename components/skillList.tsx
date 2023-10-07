@@ -10,7 +10,7 @@ interface SkillListProps {
 
 export default function SkillList({ skills, isIcon }: SkillListProps) {
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap gap-4 px-12">
       {skills.map((skill, index) => (
         <div key={index}>
           {isIcon && skill.icon ? (

@@ -1,18 +1,20 @@
 import { WorkExperience } from '@/types/experience';
-import { Locale } from '@/types/profileBasics';
+
+import { useContext } from 'react';
+
 import SectionTitle from './sectionTitle';
 import Experience from './experience';
 
+import { LocaleContext } from '@/context';
+
 interface ExperienceListProps {
   experiences: WorkExperience[];
-  locale: Locale;
 }
 
-export default function ExperienceList({
-  experiences,
-  locale,
-}: ExperienceListProps) {
-    const title = locale === 'fr' ? 'expérience' : 'experience';
+export default function ExperienceList({ experiences }: ExperienceListProps) {
+  const locale = useContext(LocaleContext);
+
+  const title = locale === 'fr' ? 'expérience' : 'experience';
   return (
     <div>
       <SectionTitle label={title} icon="/briefcase.svg" />

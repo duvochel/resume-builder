@@ -1,4 +1,4 @@
-import PROFILE from '@/data/linkedIn-toJSON_fr.json';
+import PROFILE from '@/data/PROFILE_JSON_fr.json';
 import Profile from '@/components/profile';
 
 export default function Home() {

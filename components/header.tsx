@@ -14,8 +14,8 @@ interface HeaderProps {
 
 export default function Header({ profileBasics }: HeaderProps) {
   return (
-    <header className="flex flex-col w-a4 max-w-screen-lg mx-auto p-6 customShadow">
-      <div className="grid grid-cols-6">
+    <header className="flex flex-col w-a4 gap-4 max-w-screen-lg mx-auto py-6 px-8 customShadow">
+      <div className="grid grid-cols-7">
         <Image
           src="/avatar.jpeg"
           alt=""
@@ -23,14 +23,14 @@ export default function Header({ profileBasics }: HeaderProps) {
           height={275}
           className="w-24 h-24 rounded-full drop-shadow-md"
         />
-        <div className=" flex flex-col col-span-4 justify-center pl-8 gap-2">
+        <div className=" flex flex-col col-span-5 justify-center pl-8 gap-2">
           <div className="flex text-3xl justify-left font-bold">
-            <h1 className="text-light-gray font-extralight">
+            <h1 className="text-light-gray font-medium">
               {profileBasics.name}
             </h1>
           </div>
-          <div className="flex text-lg font-medium w-96 justify-end">
-            <span>{profileBasics.label}</span>
+          <div className="flex text-lg  w-96 justify-end">
+            <span>{profileBasics.label.toLocaleUpperCase()}</span>
           </div>
         </div>
         <div className="flex flex-row gap-1 justify-end">
