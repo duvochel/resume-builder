@@ -1,8 +1,8 @@
-import { Diploma } from "@/types/education";
+import { IDiploma } from "@/types/education";
 import Image from "next/image";
 
 interface DiplomaProps {
-  diploma: Diploma;
+  diploma: IDiploma;
 }
 
 export default function Diploma({ diploma }: DiplomaProps) {

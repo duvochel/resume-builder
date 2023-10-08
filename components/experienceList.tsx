@@ -17,7 +17,7 @@ export default function ExperienceList({ experiences }: ExperienceListProps) {
   const title = locale === 'fr' ? 'expérience' : 'experience';
   return (
     <div>
-      <SectionTitle label={title} icon="/briefcase.svg" />
+      <SectionTitle label={title} icon="/icons/briefcase.svg" />
       <div className="flex flex-col gap-8 divide-y">
         {experiences.map((exp, index) => (
           <Experience key={index} experience={exp} />

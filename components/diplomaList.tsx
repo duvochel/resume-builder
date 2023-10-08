@@ -17,7 +17,7 @@ export default function DiplomaList({ diplomas }: DiplomaListProps) {
   const title = locale === 'fr' ? 'formation' : 'education';
   return (
     <div className="w-full">
-      <SectionTitle label={title} icon="/academic.svg" />
+      <SectionTitle label={title} icon="/icons/academic.svg" />
       <div className="flex flex-wrap gap-8 px-12">
         {diplomas.map((diploma, index) => (
           <Diploma key={index} diploma={diploma} />
