@@ -1,0 +1,95 @@
+{
+  "basics": {
+    "name": "",
+    "label": "",
+    "picture": "",
+    "email": "",
+    "phone": "",
+    "website": "",
+    "summary": "",
+    "location": {
+      "countryCode": "F",
+      "address": ""
+    },
+    "socialMedias": [
+      {
+        "network": "",
+        "username": "",
+        "url": "email@example.com",
+        "icon": "/envelop.svg"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "",
+        "url": "https://www.linkedin.com/",
+        "icon": "/icons/linkedin_logo.svg"
+      },
+      {
+        "network": "Github",
+        "username": "",
+        "url": "https://github.com/",
+        "icon": "/github_logo.png"
+      },
+      {
+        "network": "Gitlab",
+        "username": "",
+        "url": "https://gitlab.com/",
+        "icon": "/gitlab_logo.png"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "",
+      "icon": "",
+      "endDate": "",
+      "startDate": "",
+      "rangeString": "",
+      "highlights": [],
+      "position": "",
+      "website": "",
+      "summary": "",
+      "team": "",
+      "scopes": [],
+      "tasks": {
+        "frontend": [],
+        "backend": [],
+        "devops": [],
+        "lead": [],
+        "other": []
+      },
+      "stack": []
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "",
+      "icon": "",
+      "area": "",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "",
+      "gpa": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "",
+      "icon": "",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "",
+      "fluency": ""
+    }
+  ],
+  "interests": [],
+  "references": []
+}

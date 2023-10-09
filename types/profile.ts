@@ -28,7 +28,6 @@ interface SocialMedia {
 }
 
 export interface IProfile {
-  locale: Locale;
   basics: Basics;
   work: WorkExperience[];
   volunteer: string[];
