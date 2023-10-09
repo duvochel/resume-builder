@@ -1,29 +1,32 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import ParagrapheTitle from "./paragrapheTitle";
-import { WorkExperience } from "@/types/experience";
-import TaskGroup from "./taskGroup";
-import Badge from "./badge";
-import { useContext } from "react";
-import { LocaleContext } from "@/context";
+import ParagrapheTitle from './paragrapheTitle';
+import { WorkExperience } from '@/types/experience';
+import TaskGroup from './taskGroup';
+import Badge from './badge';
+import { useContext } from 'react';
+import { DictionaryContext } from '@/context';
+import { capitalizeFirstLetter } from '@/utils/format';
 
 interface ExperienceProps {
   experience: WorkExperience;
 }
 
 export default function Experience({ experience }: ExperienceProps) {
-  const locale = useContext(LocaleContext);
+  const dictionary = useContext(DictionaryContext);
 
   return (
     <div className="flex flex-col gap-4 bg-white py-10 sm:py-6 px-12">
       <div className="flex items-center gap-12 w-11/12">
-        <Image
-          width={150}
-          height={130}
-          src={experience.icon}
-          alt="logo"
-          className="h-12 w-16 -ml-4"
-        />
+        {experience.icon && (
+          <Image
+            width={150}
+            height={130}
+            src={experience.icon}
+            alt="logo"
+            className="h-12 w-16 -ml-4"
+          />
+        )}
         <div className="flex w-full justify-between">
           <h2 className="text-3xl tracking-tight text-gray-900 font-thin">
             {experience.company}
@@ -32,7 +35,9 @@ export default function Experience({ experience }: ExperienceProps) {
             <span className="text-gray-500">{experience.startDate}</span>
             <span>-</span>
             <span className="text-gray-500">{experience.endDate}</span>
-            <span className="ml-4 font-medium italic">({experience.rangeString})</span>
+            <span className="ml-4 font-medium italic">
+              ({experience.rangeString})
+            </span>
           </div>
         </div>
       </div>
@@ -42,30 +47,36 @@ export default function Experience({ experience }: ExperienceProps) {
             {experience.position.toLocaleUpperCase()}
           </h3>
           <div className="flex flex-col">
-            <ParagrapheTitle label="Projet" />
+            <ParagrapheTitle label={dictionary.work.summary} />
             <p className="text-gray-600 text-justify px-2">
               {experience.summary}
             </p>
           </div>
         </div>
       </article>
-      <div className="flex flex-row items-end">
-        <span className="font-medium mr-4">Equipe : </span>
-        <span>{experience.team}</span>
-      </div>
-      <div className="flex flex-col">
-        <ParagrapheTitle label="Responsabilités" />
-        <ul className="px-4">
-          {experience.scopes.map((scope, index) => (
-            <li key={index}>{scope}</li>
-          ))}
-        </ul>
-      </div>
+      {experience.team && (
+        <div className="flex flex-row items-end">
+          <span className="font-medium mr-4">
+            {capitalizeFirstLetter(dictionary.work.team)}
+          </span>
+          <span>{experience.team}</span>
+        </div>
+      )}
+      {experience.scopes.length > 0 && (
+        <div className="flex flex-col">
+          <ParagrapheTitle label={dictionary.work.scopes} />
+          <ul className="px-4">
+            {experience.scopes.map((scope, index) => (
+              <li key={index}>{scope}</li>
+            ))}
+          </ul>
+        </div>
+      )}
       <div className="flex flex-col gap-4">
-        <ParagrapheTitle label="Tâches" />
+        <ParagrapheTitle label={dictionary.work.tasks} />
         <TaskGroup tasks={experience.tasks} />
       </div>
-      <ParagrapheTitle label="Stack" />
+      <ParagrapheTitle label={dictionary.work.stack} />
       <div className="flex flex-wrap gap-4">
         {experience.stack.map((s, index) => (
           <Badge key={index} label={s} />

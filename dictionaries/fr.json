@@ -1,0 +1,21 @@
+{
+  "work": {
+    "title": "expérience",
+    "summary": "projet",
+    "team": "équipe",
+    "scopes": "responsabilités",
+    "tasks": "tâches",
+    "frontend": "frontend",
+    "backend": "backend",
+    "devops": "devOps",
+    "lead": "lead",
+    "others": "autres",
+    "stack": "stack"
+  },
+  "education": {
+    "title": "formation"
+  },
+  "skills": {
+    "title": "compétences"
+  }
+}
