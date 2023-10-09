@@ -1,13 +1,13 @@
 import { Basics } from '@/types/profile';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import {
   CHINESE_FLAG_ICON,
   ENG_FLAG_ICON,
   FRENCH_FLAG_ICON,
 } from '@/constantes';
-import Link from 'next/link';
 
 interface HeaderProps {
   profileBasics: Basics;
@@ -35,11 +35,11 @@ export default function Header({ profileBasics }: HeaderProps) {
           </div>
         </div>
         <div className="flex flex-row gap-1 justify-end">
-          <Link href="/en" className="self-center">
-            <Image src={ENG_FLAG_ICON} alt="" width={20} height={20} />
-          </Link>
           <Link href="/fr" className="self-center">
             <Image src={FRENCH_FLAG_ICON} alt="" width={20} height={20} />
+          </Link>
+          <Link href="/en" className="self-center">
+            <Image src={ENG_FLAG_ICON} alt="" width={20} height={20} />
           </Link>
           <Image src={CHINESE_FLAG_ICON} alt="" width={20} height={20} />
         </div>

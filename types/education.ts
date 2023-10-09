@@ -1,10 +1,11 @@
 export interface IDiploma {
-    institution: string;
-    icon?: string;
-    area: string;
-    studyType: string;
-    startDate: string;
-    endDate: string;
-    gpa: string;
-    courses: string[];
+  institution: string;
+  icon?: string;
+  area: string;
+  studyType: string;
+  startDate: string;
+  endDate: string;
+  gpa: string;
+  courses: string[];
+  spacer?: number;
 }

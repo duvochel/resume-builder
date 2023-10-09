@@ -1,4 +1,3 @@
-import { Locale } from '@/i18n-config';
 import { IDiploma } from './education';
 import { WorkExperience } from './experience';
 import { Skill } from './skill';

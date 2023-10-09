@@ -12,6 +12,7 @@ export interface WorkExperience {
   tasks: TaskGroup;
   stack: string[];
   icon: string;
+  spacer?: number;
 }
 
 export interface TaskGroup {

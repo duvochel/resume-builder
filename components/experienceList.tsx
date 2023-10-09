@@ -16,7 +16,7 @@ export default function ExperienceList({ experiences }: ExperienceListProps) {
   return (
     <div>
       <SectionTitle label={dictionary.work.title} icon="/icons/briefcase.svg" />
-      <div className="flex flex-col gap-8 divide-y">
+      <div className="flex flex-col gap-8">
         {experiences.map((exp, index) => (
           <Experience key={index} experience={exp} />
         ))}

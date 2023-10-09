@@ -82,6 +82,7 @@ export default function Experience({ experience }: ExperienceProps) {
           <Badge key={index} label={s} />
         ))}
       </div>
+      {experience.spacer && <div style={{height:`${experience.spacer}px`}} />}
     </div>
   );
 }
