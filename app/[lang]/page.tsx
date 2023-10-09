@@ -7,5 +7,9 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
   const profile = await getProfile(locale);
   const dictionary = await getDictionary(locale);
 
-  return <Profile profile={profile} dictionary={dictionary} locale={locale} />;
+  return (
+    <div className='dark:bg-slate-900 dark:text-slate-400'>
+      <Profile profile={profile} dictionary={dictionary} locale={locale} />;
+    </div>
+  );
 }

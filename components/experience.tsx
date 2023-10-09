@@ -16,7 +16,7 @@ export default function Experience({ experience }: ExperienceProps) {
   const dictionary = useContext(DictionaryContext);
 
   return (
-    <div className="flex flex-col gap-4 bg-white py-10 sm:py-6 px-12">
+    <div className="flex flex-col gap-4 py-10 sm:py-6 px-12">
       <div className="flex items-center gap-12 w-11/12">
         {experience.icon && (
           <Image
@@ -24,11 +24,11 @@ export default function Experience({ experience }: ExperienceProps) {
             height={130}
             src={experience.icon}
             alt="logo"
-            className="h-12 w-16 -ml-4"
+            className="h-12 w-16 -ml-4 dark:bg-gray-100"
           />
         )}
         <div className="flex w-full justify-between">
-          <h2 className="text-3xl tracking-tight text-gray-900 font-thin">
+          <h2 className="text-3xl tracking-tight text-gray-900 dark:text-slate-200 font-thin">
             {experience.company}
           </h2>
           <div className="flex items-end text-xs justify-end">
@@ -43,12 +43,12 @@ export default function Experience({ experience }: ExperienceProps) {
       </div>
       <article className="flex flex-col items-start justify-between">
         <div className="group relative">
-          <h3 className="text-base font-semibold leading-6 text-gray-900 group-hover:text-gray-600 text-center">
+          <h3 className="text-base font-semibold leading-6 text-gray-900 dark:text-slate-400 group-hover:text-gray-600 text-center">
             {experience.position.toLocaleUpperCase()}
           </h3>
           <div className="flex flex-col">
             <ParagrapheTitle label={dictionary.work.summary} />
-            <p className="text-gray-600 text-justify px-2">
+            <p className="text-gray-600 dark:text-slate-400 text-justify px-2">
               {experience.summary}
             </p>
           </div>
