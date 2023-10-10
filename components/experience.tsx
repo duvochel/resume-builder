@@ -43,12 +43,12 @@ export default function Experience({ experience }: ExperienceProps) {
       </div>
       <article className="flex flex-col items-start justify-between">
         <div className="group relative">
-          <h3 className="text-base font-semibold leading-6 text-gray-900 dark:text-slate-400 group-hover:text-gray-600 text-center">
+          <h3 className="text-base font-semibold leading-6 group-hover:text-gray-600 text-center">
             {experience.position.toLocaleUpperCase()}
           </h3>
           <div className="flex flex-col">
             <ParagrapheTitle label={dictionary.work.summary} />
-            <p className="text-gray-600 dark:text-slate-400 text-justify px-2">
+            <p className="text-justify px-2">
               {experience.summary}
             </p>
           </div>

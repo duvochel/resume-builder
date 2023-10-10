@@ -1,6 +1,7 @@
 ## Résumé builder
 This Next.js application can generate an aesthetically pleasing résumé using Tailwind CSS. 
-It's written in Typescript and it leverages the AppRouter to present the résumé in multiple languages. 
+It's optimized for pdf tabloid format and it's possible to add spacer in the template to make elements fit well on the print page.
+This Typescript app leverages the AppRouter to present the résumé in multiple languages. 
 Additionally, a dark mode option is available.
 
 ## Getting Started
