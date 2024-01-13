@@ -5,39 +5,39 @@ import Negotiator from 'negotiator';
 import { i18n } from './i18n-config';
 
 // @ts-ignore locales are readonly
-const locales: string[] = i18n.locales
+const locales: string[] = i18n.locales;
 
 function getLocale(request: NextRequest): string | undefined {
   // Negotiator expects plain object so we need to transform headers
-  const negotiatorHeaders: Record<string, string> = {}
-  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
+  const negotiatorHeaders: Record<string, string> = {};
+  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
 
   // Use negotiator and intl-localematcher to get best locale
   let languages = new Negotiator({ headers: negotiatorHeaders }).languages(
     locales
-  )
+  );
 
-  const locale = matchLocale(languages, locales, i18n.defaultLocale)
+  const locale = matchLocale(languages, locales, i18n.defaultLocale);
 
-  return locale
+  return locale;
 }
 
 export function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
-  const { pathname } = request.nextUrl
-  const pathnameHasLocale =  locales.some(
+  const { pathname } = request.nextUrl;
+  const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
-  )
- 
-  if (pathnameHasLocale) return
- 
+  );
+
+  if (pathnameHasLocale) return;
+
   // Redirect if there is no locale
   const locale = getLocale(request);
-  request.nextUrl.pathname = `/${locale}${pathname}`
-  
-  return Response.redirect(request.nextUrl)
+  request.nextUrl.pathname = `/${locale}${pathname}`;
+
+  return Response.redirect(request.nextUrl);
 }
- 
+
 export const config = {
   matcher: [
     // Skip all internal paths (_next)
@@ -45,4 +45,4 @@ export const config = {
     // Optional: only run on root (/) URL
     // '/'
   ],
-}
+};

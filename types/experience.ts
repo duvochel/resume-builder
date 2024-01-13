@@ -2,9 +2,8 @@ export interface WorkExperience {
   company: string;
   startDate: string;
   endDate: string;
-  rangeString: string;
-  highlights: string[];
   position: string;
+  mainLanguage: string;
   summary: string;
   website: string;
   team: string;

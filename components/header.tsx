@@ -18,7 +18,7 @@ export default function Header({ profileBasics }: HeaderProps) {
     <header className="flex flex-col w-a4 gap-4 max-w-screen-lg mx-auto py-6 px-8 customShadow">
       <div className="grid grid-cols-7">
         <Image
-          src="/avatar.jpeg"
+          src={profileBasics.picture}
           alt=""
           width={300}
           height={275}
@@ -26,7 +26,7 @@ export default function Header({ profileBasics }: HeaderProps) {
         />
         <div className=" flex flex-col col-span-5 justify-center pl-8 gap-2">
           <div className="flex text-3xl justify-left font-bold">
-            <h1 className="text-light-gray dark:text-slate-200 font-medium">
+            <h1 className="text-slate-600 dark:text-slate-200 font-medium">
               {profileBasics.name}
             </h1>
           </div>
