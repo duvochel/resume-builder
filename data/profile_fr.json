@@ -1,0 +1,188 @@
+{
+  "basics": {
+    "name": "Jane Doe",
+    "label": "Développeur Full Stack TypeScript",
+    "picture": "https://thispersondoesnotexist.com/",
+    "email": "jane.doe@gmail.com",
+    "phone": "",
+    "website": "",
+    "summary": "Développeur de logiciels inf, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "location": {
+      "countryCode": "FR"
+    },
+    "socialMedias": [
+      {
+        "network": "mail",
+        "username": "",
+        "url": "jane.doe@gmail.com",
+        "icon": "/envelop.svg"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "janedoe",
+        "url": "https://www.linkedin.com/in/janedoe",
+        "icon": "/icons/linkedin_logo.svg"
+      },
+      {
+        "network": "Github",
+        "username": "",
+        "url": "https://github.com/doe",
+        "icon": "/github_logo.png"
+      },
+      {
+        "network": "Gitlab",
+        "username": "",
+        "url": "https://gitlab.com/doe",
+        "icon": "/gitlab_logo.png"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Lorem ipsum",
+      "icon": "/images/logoipsum-330.svg",
+      "startDate": "2018-01-01",
+      "endDate": "",
+      "position": "Full Stack Developer",
+      "mainLanguage": "TypeScript",
+      "website": "",
+      "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "scopes": [],
+      "tasks": {
+        "frontend": [
+          "Creating components using Material-ui, Styled-Components or Tailwindcss",
+          "Use data from GraphQL with Apollo client",
+          "Create NextJs applications"
+        ],
+        "backend": [
+          "GraphQL endpoint development using Apollo server",
+          "RESTfull API development using NestJS",
+          "Data aggregation using MongoDB",
+          "Server side rendering  with NextJs"
+        ],
+        "devops": [],
+        "lead": [
+          "Architecture and design",
+          "Creating data schemas based on business requirements",
+          "Gathering requirements and drafting technical specifications"
+        ],
+        "other": ["Unit and integration tests"]
+      },
+      "stack": ["React", "Redux", "NextJs", "GraphQL", "NestJs", "MongoDB"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Lorem ipsum dolor sit amet",
+      "icon": "/eql_logo.png",
+      "area": "Duis aute irure dolor in reprehenderit",
+      "studyType": "Excepteur sint occaecat",
+      "startDate": "2023",
+      "endDate": "2024",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Université Paris Descartes",
+      "icon": "/paris5_logo.png",
+      "area": "Mathématiques appliquées",
+      "studyType": "Licence",
+      "startDate": "2018",
+      "endDate": "2020",
+      "gpa": "",
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "TypeScript",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "React.js",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Node.js",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Next.js",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Tabler-icons_brand-nextjs.svg",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "GraphQL",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "PostgeSQL",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "MongoDB",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mongodb-ar21.svg",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "ElasticSearch",
+      "icon": "/elasticsearch-logo.png",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Amazon Web Services",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Google Cloud Platform",
+      "icon": "/images/google-cloud.png",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Git",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/0/03/Git_format.png",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Gitlab-CI",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/3/35/GitLab_icon.svg",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Docker",
+      "icon": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Docker-svgrepo-com.svg",
+      "level": "",
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "fr",
+      "fluency": "Native Speaker"
+    }
+  ]
+}

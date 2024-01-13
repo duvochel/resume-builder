@@ -35,5 +35,5 @@ yarn-error.log*
 next-env.d.ts
 
 # dev data
-/data
+data/dev_*
 public/avatar.jpeg
